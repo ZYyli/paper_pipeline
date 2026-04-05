@@ -1,0 +1,7 @@
+biopython==1.83
+pandas==2.2.1
+tqdm==4.66.2
+openai==2.30.0
+matplotlib==3.10.8
+python-dotenv==1.2.2
+seaborn==seaborn
