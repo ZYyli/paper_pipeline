@@ -8,7 +8,7 @@
 ### ✨ 核心特性 (Key Features)
 - **模块化设计 (Modular Architecture)**: 爬虫逻辑 (Scrapers) 与 AI 解析逻辑 (Extractors) 完全解耦，支持轻松更换底层模型（如 GPT-4, DeepSeek, GLM）。
 - **多任务模板引擎 (Multi-task Template Engine)**: 支持通过命令行动态切换 Prompt 模板，适配不同的科研提取需求（如靶基因提取、临床预后分析、机制分类）。
-- **自动化可视化 (Automated Visualization)**: 内置 Jupyter Notebook 分析脚本，一键生成文献分布饼图、疾病关联排行等统计图表。
+- **自动化可视化 (Automated Visualization)**: 内置可视化模块（`utils/visualizer.py`），支持一键生成文献分布饼图、疾病关联排行等统计图表。
 
 ### 🛠️ 技术栈 (Tech Stack)
 - **Language**: Python 3.8+
@@ -42,7 +42,7 @@ python run_pipeline.py --query "MBNL1 AND 2015:2026[dp]" --max_results 400 --tem
 ```
 
 ### 📊 可视化展示 (Visualization)
-项目运行后，可以通过 data_analysis.ipynb 生成如下分析图表：
+项目运行后，生成如下分析图表：
 - ***机制分布 (Mechanism Distribution)**
 ![alt text](image.png)
 - ***疾病关联排行 (Disease Ranking)**

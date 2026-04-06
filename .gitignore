@@ -1,4 +1,4 @@
 .env
 __pycache__/
-test_pipeline.py
-testai_output
+test*
+data_analysis.ipynb

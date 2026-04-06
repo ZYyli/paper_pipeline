@@ -6,6 +6,7 @@ from dotenv import load_dotenv  # <--- 引入环境变量加载器
 from scrapers.pubmed_scraper import PubMedScraper
 from extractors.prompt_templates import PROMPT_REGISTRY
 from extractors.domestic_client import DomesticExtractor 
+from utils.visualizer import generate_dashboard
 
 # 自动寻找项目根目录下的 .env 文件并加载里面的变量
 load_dotenv() 
@@ -78,6 +79,9 @@ def main():
     # 使用终端传进来的输出路径
     df.to_csv(args.output, index=False, encoding='utf-8-sig')
     print(f"🎉 任务完成！结构化数据已保存至: {args.output}")
+    
+    # 自动触发可视化报表
+    generate_dashboard(args.output)
 
 if __name__ == "__main__":
     main()
